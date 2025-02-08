@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacts</title>
+  <link rel="stylesheet" href = "styles.css">
+</head class="cuerpop">
+<body>
+  <div>
+    <h1>Contactos</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>email</th>
+          <th>Nombre</th>
+          <th>Comentario</th>
+          <th>IP del Cliente</th>
+          <th>Fecha y Hora</th>
+          <th>País</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% contactos.forEach(function(contacto) { %>
+          <tr>
+            <td><%= contacto.email %></td>
+            <td><%= contacto.nombre %></td>
+            <td><%= contacto.comentario %></td>
+            <td><%= contacto.clientIp %></td>
+            <td><%= contacto.fechaHora %></td>
+            <td><%= contacto.pais %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
